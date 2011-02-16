@@ -51,6 +51,8 @@ module HoptoadNotifier
         error_id = response.body.match(%r{<error-id[^>]*>(.*?)</error-id>})
         error_id[1] if error_id
       end
+
+      return response
     end
 
     private
